@@ -1,0 +1,68 @@
+
+
+1 - ¿Qué diferencia hay entre == y === en JavaScript? Mostrá un ejemplo donde den resultados distintos y explicá por qué.
+
+    0 == "0";    true (convierte valores aunque los Tipos sean distintos)
+    0 === "0";   false (compara valores y tipos)
+
+2 - ¿Qué es la coerción de tipos? Mostrá dos ejemplos de coerción implícita y uno de coerción explícita.
+
+   -  Es cuando JavaScript convierte un tipo a otro automáticamente (implicita), o uno lo hace a proposito (explicita).
+   explicita: 
+    Number("42");     // 42
+    String(10);       // "10"
+    Boolean(0);       // false
+    implicita:
+    "1" + 1       // "11" (concatena)
+    "1" - 1       // 0   (convierte a número)
+
+3 - ¿Qué resultado devuelve una expresión como false || "hola" o "hola" && 0? Explicá el rol de los operadores lógicos en esos casos.
+
+    Los operadores lógicos (|| y &&) devuelven el valor que “tiene sentido” según si es truthy o falsy.
+
+    false || "hola"
+
+    Devuelve "hola" porque el || devuelve el primer valor verdadero que encuentra.
+
+    "hola" && 0
+
+    Devuelve 0 porque el && devuelve el primer valor falso que encuentra.
+
+4 - ¿Cuáles son las principales estructuras de control de flujo en JavaScript? Mencioná if, else, switch, y explicá brevemente en qué casos conviene usar cada uno.
+
+    if / else if / switch
+
+
+5 - ¿Para qué sirve el operador ternario (condición ? a : b)? Reescribí un if simple con este operador.
+
+    Para escribir un if en una sola linea
+    if (edad >= 18) {
+    mensaje = "Mayor";
+    } else {
+    mensaje = "Menor";
+    }
+    con TERNARIO:
+
+    let mensaje = edad >= 18 ? "Mayor" : "Menor";
+
+6 - ¿Cómo funcionan los bucles for y while en JavaScript? Mostrá un ejemplo de cada uno.
+
+    for: lo usás cuando sabés cuántas veces querés repetir algo.
+
+    for (let i = 0; i < 3; i++) {
+    console.log(i); 
+    } // 0, 1, 2
+
+    while: cuando repetís hasta que pase algo.
+
+    let i = 0;
+    while (i < 3) {
+    console.log(i);
+    i++;
+    }
+
+7 - ¿Qué hacen break y continue dentro de un bucle? ¿Qué efecto tienen en la ejecución del código?
+
+break: sale del bucle aunque no haya terminado
+
+continue: salta a la siguiente iteracion, sin ejecutar lo que sigue.

@@ -1,0 +1,50 @@
+1 - ¿Qué significan los conceptos de scope, hoisting y mutabilidad en JavaScript? Explicá con ejemplos simples.
+
+- Scope es básicamente el lugar del código donde una variable existe y se puede usar.
+  Puede ser global (la podés usar en todo el código) o local (solo dentro de una función o bloque).
+- Hoisting: es cuando JS mueve las declaraciones (no asignaciones) al tope del código durante el compilado.
+  O sea, podes usar var antes de declararla, aunque puede ser mala practica.
+- Mutabilidad: es que si un valor se puede cambiar o no.
+
+  Por ejemplo, los arrays y objetos sí son mutables, pero los valores primitivos como number o string no
+
+2 - ¿Qué diferencias hay entre var, let y const en cuanto a scope, hoisting y mutabilidad? ¿Cuándo usarías uno y cuándo otro.
+
+- var tiene scope de función, se hace hoisting y si se puede reasignar.
+
+- let tiene scope de bloque, también se eleva (pero no podés usarla antes de declararla).
+
+- const igual que let, pero no te deja reasignar la variable (aunque sí podés con objetos o arrays).
+
+3 - ¿Qué pasa si intentás usar una variable declarada con let antes de su declaración? ¿Y con var?
+
+- let: te da error "Cannot access 'variable' before initialization". Porque está en la zona temporal muerta.
+- var: devuelve undefined, porque sube y se inicializa con ese valor por defecto. (ejercicio 3 la ejecucion)
+
+4 - ¿Qué significa que JavaScript sea un lenguaje de tipado dinámico?
+
+- Significa que las variables no tienen un tipo dijo de datos, es decir si declaro una variable con un numero,
+  luego le puedo asignar un string, se podria con js pero seria mala practica.
+
+5 - ¿Cuál es la diferencia entre undefined y null en JavaScript?
+
+- undefined: es que a una variable no se le asigno ningun valor (seguramente por error)
+- null: este valor indica que fue asignado de esa manera (es decir que fue intencional la asignacion)
+
+6 - ¿Qué tipo de valor es NaN y en qué situaciones puede aparecer?
+
+- Not a Number: significa que no es de tipo numerico, aparecen cuando haces cuentas con variables que no son numericas
+  ejemplo: 20 \ "Pepe";
+
+7 - ¿Qué hace el operador typeof y qué valores puede devolver?
+
+- el valor typeof: sirve para saber qué tipo de dato tiene una variable.
+
+8 - ¿Qué diferencias hay entre usar comillas simples, dobles o backticks para strings?
+las comillas simples y dobles son excactamente lo mismo, los backtick hacen la diferencia permitiendo
+escribir variables sin concatenar ejemplo `Hola ${nombre}`
+
+9 - ¿Por qué typeof null devuelve "object" y por qué se considera un bug histórico?
+
+- Es un bug de los primeros dias de JS, basicamente null no es un objeto, pero por como se codifico el tipo de datos, quedó así y no
+  se puede arreglar ya que romperia muchos programas
