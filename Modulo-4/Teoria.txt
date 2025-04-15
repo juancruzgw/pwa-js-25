@@ -71,14 +71,38 @@ Explicá para qué sirve cada uno y cómo podrías usarlos para recorrer, agrega
     persona.nombre = ""; // eliminar valor de la propiedad
 
 14 - ¿Qué es un objeto anidado? Mostrá un ejemplo.
+        let persona = {
+                nombre: "Fulano",
+                direccion: {
+                    calle: "Av. Argentina",
+                    numero: 123
+                }
+                };
 
 15 - ¿Cómo se recorren las propiedades de un objeto? ¿Para qué sirve for...in?
+        for (let clave in persona) {
+    console.log(clave, persona[clave]);
+    }
 
 16 - ¿Qué devuelven Object.keys(), Object.values() y Object.entries()?
 
+            keys() → array con las claves
+
+            values() → array con los valores
+
+            entries() → array de pares [clave, valor]
+
 17 - ¿Qué diferencia hay entre un array y un objeto en cuanto a estructura y uso?
+    Array: lista ordenada, se accede por indice
+    Objeto: clave-valor, se accede por nombre
 
 18 - ¿Qué es la desestructuración de objetos y para qué sirve?
+    -
 
 19 - ¿Cómo se usan los operadores spread (...) y rest (...) con objetos?
 
+    Spread-Operator: copia propiedades de un objeto a otro.
+     let numeros = [1, 2, 3];
+     let nuevosNumeros = [...numeros, 4, 5]; 
+     
+    Rest-Operator: junta el resto de propiedades.
