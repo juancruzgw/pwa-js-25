@@ -1,0 +1,71 @@
+1 - ¿Cómo se declara una función en JavaScript? ¿Cuál es la diferencia con una arrow function? 
+    ¿Qué pasa si llamás a una función antes de declararla con function?
+    ¿Y si es una arrow function?
+
+    - Las arrow functions no tienen su propio this, usan el del contexto donde están.
+
+    - Las funciones comunes se hoistean, o sea, podes llamarlas antes de declararlas. 
+        Las arrow no, porque son expresiones y no se levantan.
+
+        sintaxis: 
+    function saludar(nombre) {
+    return "Hola " + nombre;
+    } 
+    arrowFunction: 
+    const saludar = (nombre) => {
+    return "Hola " + nombre;
+    }
+
+2 - ¿Qué diferencia hay entre una función que retorna un valor y una que no?
+    - Una que retorna te devuelve algo que podés usar.
+
+    - Una que no retorna, puede solo ejecutar su lógica interna (ej. console.log), pero no guarda el resultado
+
+3 - ¿Qué es el scope? 
+    ¿Qué diferencia hay entre una variable global y una local?
+
+    El scope es la parte donde una variable es accesible.
+    Global: vive fuera de funciones y se puede usar en todo el código.
+    Local: vive dentro de una función (o bloque)
+
+4 - ¿Qué pasa si una función accede a una variable que no fue declarada dentro de ella?
+
+    Si existe en un scope superior, la usa. 
+    Si no, la crea como global, lo cual es peligroso
+
+5 - ¿Qué es un closure? ¿Podés explicarlo con un ejemplo simple?
+    Un closure es cuando una función recuerda las variables del contexto donde fue creada, incluso si ese contexto ya terminó.
+
+    ejemplo:
+    function saludar() {
+    let nombre = "Juan";
+
+    function decirHola() {
+        return "Hola " + nombre;
+    }
+
+    return decirHola;
+    }
+
+    const saludo = saludar();
+    console.log(saludo()); 
+    // "Hola Juan"
+    
+6 - ¿Qué pasa si una función se llama a sí misma? ¿Cómo se llama eso?
+
+    Eso se llama recursión. 
+    La función se repite a sí misma hasta que se cumpla una condición de corte si no, entra en bucle infinito
+
+7 - ¿Qué pasa si una función tiene múltiples parámetros (4 por ejemplo) pero se llama con menos (3)?
+
+    Los que falten van a tirar undefined.
+
+8 - ¿Qué diferencia hay entre declarar una función dentro de otra, o fuera?
+
+    - Si está dentro, solo se puede usar en la funcion
+
+    - Si está fuera, es global y puede se puede volver a usar
+
+9 - ¿Se puede guardar una función en una variable? ¿Para qué sirve eso?
+
+    - Si se puede, asi es como se hacen los callbacks, se pasan como argumentos o se devuelven de otras funciones.

@@ -1,0 +1,84 @@
+
+1 - ¿Qué es un array en JavaScript y cómo se declara?
+    Un array es una lista ordenada de cosas (numeros, strings, objetos, lo que sea) Se declara con []
+
+2 - ¿Cómo accedés al tercer elemento de un array?
+
+    Con corchetes y el índice. arranca del 0 ejemplo: array[2]; // tercer elemento
+
+3 - ¿Qué métodos de array son los más comunes en JavaScript? 
+Explicá para qué sirve cada uno y cómo podrías usarlos para recorrer, agregar o quitar elementos.
+    .push() → Agrega al final
+
+    .forEach() → Recorre el array
+
+    .map() → Crea un nuevo array con los resultados de aplicar una función
+
+    .filter() → Filtra elementos que cumplen una condición
+
+    .find() → Busca el primer valor que cumpla algo
+
+    .includes() → Ver si un valor está en el array
+
+    .unshift() → Agrega al principio
+
+4 - ¿Qué método usarías para eliminar el último elemento de un array? ¿Y el primero?
+
+    .pop() → Saca el ultimo
+
+    .shift() → Saca el primero
+
+5 - ¿Qué pasa si accedés a una posición inexistente en un array?
+    - larga undefined 
+6 - ¿Cómo verificás si un valor está presente en un array o en un Set?
+    - array.includes(valor)
+7 - ¿Qué es un Set? ¿En qué casos conviene usarlo en lugar de un array?
+    - 
+8 - ¿Qué es un Map y qué lo diferencia de un objeto ?
+    - Un Map es parecido a un objeto, pero mas flexible. 
+    Podes usar cualquier tipo como clave (no solo strings).
+9 - ¿Cómo recorrerías un array con un bucle? Mostrá al menos dos formas diferentes.
+    - 
+    for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+    }
+    -
+    array.forEach(elemento => {
+    console.log(elemento);
+    });
+
+10 - ¿Qué es un objeto en JavaScript y cómo se declara?
+    - Un objeto guarda datos en pares clave: valor
+            let persona = {
+            nombre: "Juan",
+            edad: 22
+            };
+
+11 - ¿Cuál es la diferencia entre acceder a una propiedad con . y con []?
+    - Con . accedés directo si sabés el nombre de la propiedad.
+    - Con [] podés usar variables o strings.
+    ej:
+    persona.nombre;     // "Juan"
+    persona["edad"];    // 22
+
+12 - ¿Qué sucede si intentás acceder a una propiedad que no existe en un objeto?
+    - Te da undefined, como en los arrays.
+
+13 - ¿Cómo agregás, modificás y eliminás propiedades en un objeto?
+    como asignacion comun
+    persona.nacionalidad = "Argentina"; //asignacion
+    persona.nombre = "Pedro"; //sobreescritura
+    persona.nombre = ""; // eliminar valor de la propiedad
+
+14 - ¿Qué es un objeto anidado? Mostrá un ejemplo.
+
+15 - ¿Cómo se recorren las propiedades de un objeto? ¿Para qué sirve for...in?
+
+16 - ¿Qué devuelven Object.keys(), Object.values() y Object.entries()?
+
+17 - ¿Qué diferencia hay entre un array y un objeto en cuanto a estructura y uso?
+
+18 - ¿Qué es la desestructuración de objetos y para qué sirve?
+
+19 - ¿Cómo se usan los operadores spread (...) y rest (...) con objetos?
+
