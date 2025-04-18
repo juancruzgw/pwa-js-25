@@ -1,0 +1,56 @@
+
+
+1 - ¿Qué es la programación funcional y cómo se relaciona con los métodos de array en JavaScript?
+
+    - La programación funcional es un estilo donde tratás todo como funciones puras (sin efectos secundarios) y datos inmutables.
+    En JS, métodos como .map(), .filter(), .reduce() son herramientas funcionales porque no modifican el array original, sino que te devuelven uno nuevo.
+
+2 - ¿Cuál es la diferencia entre .map(), .filter() y .reduce()?
+    - .map(): transforma cada elemento y devuelve un nuevo array.
+
+    - .filter(): filtra elementos según una condicion y devuelve un nuevo array mas chico o igual.
+
+    - .reduce(): agarra todo el array y lo reduce a un solo valor (un numero, un objeto, lo que sea).
+
+3 - ¿Qué es la inmutabilidad y por qué es importante en la programación funcional?
+
+    - Inmutabilidad = no modificar los datos originales, sino trabajar siempre con copias.
+    
+4 - ¿Cómo funcionan los callbacks en JavaScript? Explicá con un ejemplo.
+    - Un callback es simplemente una función que pasás como argumento a otra.
+
+    function saludar(nombre) {
+        console.log(`Hola ${nombre}`);
+    }
+
+    function procesarUsuario(nombre, callback) {
+        callback(nombre);
+     }
+
+    procesarUsuario("Juan", saludar); // "Hola Juan"
+
+5 - ¿Qué es el método .some() y en qué casos se utiliza?
+    - .some() revisa si al menos un elemento cumple una condicion si alguno pasa, te devuelve true.
+
+6 - ¿Qué es el método .find() y cómo se diferencia de .filter()?
+    - .find() devuelve el primer elemento que cumple una condición.
+
+    - .filter() devuelve todos los elementos que cumplen.
+
+7 - ¿Cómo se puede combinar .map() con .filter() para transformar y filtrar datos?
+
+    en convinacion .filter() y .map(), 
+    primero haces un "filtro" para quedarte solo con los elementos que cumplen cierta condicion, 
+    y después aplicás una transformación sobre esos elementos filtrados.
+
+8 - ¿Qué es la desestructuración de arrays y para qué sirve?
+
+    - Es sacar elementos directamente de un array en variables de forma mas comoda.
+
+9 - ¿Cómo se puede usar el operador spread (...) con arrays?
+
+    - Te sirve para copiar, juntar o expandir arrays.
+
+10 - ¿Qué es el método .flatMap() y en qué casos es útil?
+
+    - .flatMap() es como hacer un .map() y después un .flat() de 1 nivel. Muy util cuando cada item puede convertirse en varios items.
