@@ -139,31 +139,79 @@ return name
 /* 2.6. Información expandida de una película
 Dado el nombre de una película, devolvé un objeto con toda su información:
 
-- datos de la película
-- directores como objetos con nombre
-- géneros como objetos con nombre
-- todas sus críticas con:
-- datos del crítico
-- país del crítico
+- datos de la película //busco "peliculas" directamente  ✅
+- directores como objetos con nombre // buscar en "director" ✅
+- géneros como objetos con nombre // buscar desde genero ✅
+- todas sus críticas con:     🥴  creo que hay que armar array con eso
+-      datos del crítico // buscar desde calificacione (calificaciones.id == peli.id) => el critico id ✅
+-       país del crítico // aca desde critico con el id.critico anterior 
 Si no existe la película, devolver undefined. 
 
 diiablo q dificl 😫
 */
 const verInfoPelicula = (nombre) => {
-
-  let info = {}
+  
   let datosPeli = base.peliculas
   let laBuscada = datosPeli.find(peli => peli.nombre === nombre)
+  if (!laBuscada){
+    return undefined
+  }
+  let info = {}
+  //console.log(laBuscada )
   if (laBuscada){
+    let idPelicula = laBuscada.id //laBuscada.id
+    let directores = base.directores // id y nombre
+    let generos = base.generos // id y nombre
+    let calificaciones = base.calificaciones // idcritico y idpeli y puntuacion
+    let criticos = base.criticos
+    let nombresGeneros = []
+    let infoCritico = []
+    
+    
     info = {nombre: laBuscada.nombre, 
           anio: laBuscada.anio,} 
-          //console.log(info) // busca bien
+          laBuscada.directores.forEach(dire =>{
+            const posibleDire = directores.find(direc => direc.id == dire)
+           // console.log(posibleDire)
+            // sin ...info me pisaba lo anterior :( // es como el += de un string :)
+            info = {...info, director: posibleDire.nombre } // si encuentra 2 o mas va a poner el ultimo :C
+          
+        } )
+        laBuscada.generos.forEach(gener => {
+          const genero = generos.find(gene => gene.id == gener) // el .find me devolvia un obj 🤬😡😡 , no lo podia recorrer
+          nombresGeneros = [...nombresGeneros, genero.nombre] // tendria que hacerlo en el anterior, ya que retornaba el ultimo genero que recorria
+          //console.log(nombresGeneros)
+          if (nombresGeneros.length > 0){
+            info = {...info, Generos: nombresGeneros}
+          }
+        })
+        calificaciones.forEach( cali => {
+          if (cali.pelicula === idPelicula){
+            criticos.filter(criti => {
+              return criti.id === cali.critico 
+            }).map (critico => {
+      
+              infoCritico = [...infoCritico,critico.nombre]
+              info = {...info, Criticos: infoCritico }
+            })
+          }
+        })
   }
-
-  
-
+ 
+return info
 
 }
 
 
-verInfoPelicula ("Interstellar")
+console.log(verInfoPelicula ("Interstellar")) 
+
+/**{
+  nombre: 'Interstellar',
+  anio: 2014,
+  director: 'Christopher Nolan',
+  Generos: [ 'Ciencia Ficcion', 'Suspenso' ]
+  Criticos: [ 'Jean-Luc Picard', 'Ana María Orozco' ]
+
+
+  console.log(verInfoPelicula ("asdfasd")) // ReferenceError: info is not defined
+} */

@@ -109,7 +109,7 @@ export const basededatos = {
             generos: [1, 3]
           }
         ],
-        directores: [
+    directores: [
           { id: 2, nombre: "Lilly Wachowski" },
           { id: 3, nombre: "Christopher Nolan" },
           { id: 4, nombre: "James Cameron" },
@@ -124,7 +124,11 @@ export const basededatos = {
   ],
   criticos: [
     { id: 1, nombre: "Pipo Gorosito", edad: 60, pais: "Argentina" },
-    { id: 2, nombre: "Roger Ebert", edad: 70, pais: "Estados Unidos" }
+    { id: 2, nombre: "Roger Ebert", edad: 70, pais: "Estados Unidos" },
+    { id: 3, nombre: "Ana María Orozco", edad: 51, pais: "Colombia" },
+    { id: 4, nombre: "Jean-Luc Picard", edad: 65, pais: "Francia" },
+    { id: 5, nombre: "Marta Sánchez", edad: 48, pais: "España" },
+    { id: 6, nombre: "Takeshi Kitano", edad: 77, pais: "Japón" },
   ],
   calificaciones: [
     { critico: 1, pelicula: 1, puntuacion: 8 },
