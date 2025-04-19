@@ -1,18 +1,26 @@
-Trabajo Práctico JavaScript
+# Trabajo Práctico JavaScript
+
 Una guía de estudio para repasar y profundizar los conceptos fundamentales de JavaScript
 
-Introducción
+---
+
+## Introducción
+
 Este Trabajo Práctico 0 de JavaScript es una guía de estudio pensada para ayudarte a repasar y profundizar los conceptos fundamentales del lenguaje, combinando teoría y práctica.
 
 No es una entrega obligatoria para la materia. Es una propuesta opcional, a modo de desafío personal, para quienes quieran mejorar su dominio de JavaScript, el lenguaje más utilizado en el desarrollo web.
 
 La guía está organizada en módulos temáticos. Cada módulo incluye:
 
-Preguntas teóricas para repasar los conceptos clave.
-Ejercicios prácticos para aplicar esos conceptos con código.
+- Preguntas teóricas para repasar los conceptos clave.
+- Ejercicios prácticos para aplicar esos conceptos con código.
+
 No es necesario resolver toda la guía. Podés enfocarte en los temas que más te interesen o te resulten difíciles, avanzar a tu ritmo y volver cuando quieras.
 
-Consejos para aprovechar mejor esta guía
+---
+
+## Consejos para aprovechar mejor esta guía
+
 - Usá la consola del navegador (F12 > Consola) para probar fragmentos de código rápido. Podes escribir y ejecutar código JavaScript desde ahí.
 - Codeá todo lo que leas. La teoría se entiende mejor cuando la escribís y ves qué pasa.
 - Intenta resolver la teoría antes de la práctica.
