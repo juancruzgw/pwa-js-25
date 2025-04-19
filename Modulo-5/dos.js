@@ -215,3 +215,7 @@ console.log(verInfoPelicula ("Interstellar"))
 
   console.log(verInfoPelicula ("asdfasd")) // ReferenceError: info is not defined
 } */
+
+  // 2.7. Películas por país de filmación
+//Implementá una función que reciba el nombre de un país y devuelva todas las películas que fueron filmadas allí.
+//peliculasPorPais("Nueva Zelanda") -&gt; [El señor de los anillos]
